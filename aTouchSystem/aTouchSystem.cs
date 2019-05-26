@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace aSystem.aTouchSystem
-{
-    public delegate void OnATouchUpdate(List<aTouch> activeTouches);
+
 
     public class aTouchSystem : MonoBehaviour
     {
@@ -15,7 +14,8 @@ namespace aSystem.aTouchSystem
         private List<IaTouchSoruce> _touchSoruces;
         private Queue<aTouch> _touchPool;
         private List<aTouch> _activeTouches;
-
+    {
+        public delegate void OnATouchUpdate(List<aTouch> activeTouches);
         private event OnATouchUpdate _aTouchUpdateEvent;
 
         private void Awake()

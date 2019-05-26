@@ -50,9 +50,5 @@ namespace aSystem.aTouchSystem
         {
             return aTouchSystemUtils.PositionOnPlane(plane, ToRay(camera, previus));
         }
-
     }
-
-
-
 }
