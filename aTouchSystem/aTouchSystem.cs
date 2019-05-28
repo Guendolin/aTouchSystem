@@ -4,8 +4,6 @@ using UnityEngine;
 
 namespace aSystem.aTouchSystem
 {
-
-
     public class aTouchSystem : MonoBehaviour
     {
         public static aTouchSystem Instance;
