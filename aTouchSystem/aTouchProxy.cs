@@ -29,6 +29,7 @@ namespace aSystem.aTouchSystem
                 
                     activeTouch.id = -i;
                     activeTouch.touch = null;
+                    activeTouch.startTime = Time.time;
 
                     activeTouch.touchState = aTouchState.Press;
                     activeTouch.startScreenPos = activeTouch.previusScreenPos = activeTouch.screenPos = Input.mousePosition;
@@ -58,7 +59,7 @@ namespace aSystem.aTouchSystem
 
                 if(activeTouch != null)
                 {
-                    activeTouch.activateThisFrame();
+                    activeTouch.Update();
                     _touchSystem.AddToActiveTouches(activeTouch);
                 }
             }
