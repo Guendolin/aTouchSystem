@@ -8,6 +8,32 @@ namespace aSystem.aTouchSystem
     {
         public static aTouchSystem Instance;
 
+        public static void SubscripeToTouches(OnATouchUpdate touchUpdate)
+        {
+            if (Instance != null)
+            {
+                Instance._SubscripeToTouches(touchUpdate);
+            }
+            else
+            {
+                Debug.LogError("No touch system pressent in scene!");
+            }
+        }
+
+        public static void DesubscripeToTouches(OnATouchUpdate touchUpdate)
+        {
+            if (Instance != null)
+            {
+                Instance._DesubscripeToTouches(touchUpdate);
+            }
+            else
+            {
+                Debug.LogError("No touch system pressent in scene!");
+            }
+        }
+
+
+
         public Camera touchCamera;
 
         private List<IaTouchSoruce> _touchSoruces;
@@ -68,12 +94,12 @@ namespace aSystem.aTouchSystem
             }
         }
 
-        public void SubscripeToTouches(OnATouchUpdate touchUpdate)
+        private void _SubscripeToTouches(OnATouchUpdate touchUpdate)
         {
             _aTouchUpdateEvent += touchUpdate;
         }
 
-        public void DesubscripeToTouches(OnATouchUpdate touchUpdate)
+        public void _DesubscripeToTouches(OnATouchUpdate touchUpdate)
         {
             _aTouchUpdateEvent -= touchUpdate;
         }
