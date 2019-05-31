@@ -62,7 +62,7 @@ namespace aSystem.aTouchSystem
                 }
             }
 
-            if(_activeTouches.Count > 0)
+            if(_activeTouches.Count > 0 && _aTouchUpdateEvent != null)
             {
                 _aTouchUpdateEvent(_activeTouches);
             }
