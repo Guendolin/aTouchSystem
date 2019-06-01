@@ -2,7 +2,7 @@
 
 namespace aSystem.aTouchSystem
 {
-    public enum aTouchState { Press, Hold, Release};
+    public enum aTouchState { None, Press, Hold, Release};
 
     public class aTouch
     {
