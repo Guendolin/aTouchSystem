@@ -34,7 +34,7 @@ namespace aSystem.aTouchSystem
         public const float TAPP_MOVE_LIMIT = 20 * 20f; // Limit move for 20 pixels. This is dangerous because this changed depending on screen rez.
         public const float TAPP_TOUCH_LIMIT = 0.35f;
 
-        public bool Tapp
+        public bool Tap
         {
             get
             {

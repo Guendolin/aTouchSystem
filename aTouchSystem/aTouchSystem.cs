@@ -20,7 +20,7 @@ namespace aSystem.aTouchSystem
             }
         }
 
-        public static void DesubscripeToTouches(OnATouchUpdate touchUpdate)
+        public static void DesubscribeToTouches(OnATouchUpdate touchUpdate)
         {
             if (Instance != null)
             {
